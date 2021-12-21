@@ -30,3 +30,10 @@ The main components of the solution are:
 * A cloud build trigger to run a maven build and deploy of the dataflow job from the cloud source repository above.
 * A dataflow staging bucket
 * A couple of pubsub topics, one which aggregates logging from the logged projects
+
+## Deploying Solution
+
+* Integrate this Terraform module into your code.
+* Run Terraform apply
+* Pull and then push the [Google Data Lineage code](https://github.com/GoogleCloudPlatform/bigquery-data-lineage) into the cloud source repository.
+* Trigger dataflow cloud build trigger (assuming pushing the code to the cloud source repository hasn't already).
